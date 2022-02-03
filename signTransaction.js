@@ -6,9 +6,10 @@ require('dotenv').config();
 const common = new Common({chain: Chain.Rinkeby, hardfork: Hardfork.London });
 
 const PRIVATE_KEY = process.env.PRIVATE_KEY; // if you set up .dotenv file correctly, your private key will be accessed automatically using `process.env`
+const ALCHEMY_URL = process.env.ALCHEMY_URL;
 
 // Add your Alchemy/Infura endpoint (make sure it is a Rinkeby endpoint for this one!)
-const ALCHEMY_ENDPOINT = "https://eth-rinkeby.alchemyapi.io/v2/BdeQPtUF5FFP1F9gxvRhuzwmKsQPsgDa";
+const ALCHEMY_ENDPOINT = ALCHEMY_URL;
 
 const txParams = {
   "nonce": 0, // you will need to change this!
